@@ -16,7 +16,14 @@ namespace WPFApplication {
     /// </summary>
     public partial class MainWindow : Window {
 
+        double temp = 0;
+
         string output = "";
+
+        string operation = "";
+
+        CalculatorLogic calculatorLogic = new CalculatorLogic();
+
 
         public MainWindow() {
             InitializeComponent();
@@ -26,6 +33,7 @@ namespace WPFApplication {
 
         private void NumBtn_Click(object sender, RoutedEventArgs e) {
             string name = ((Button)sender).Name;
+            output = calculatorLogic.clickNumber(name, output);
 
             switch(name) {
                 case "OneBtn":
@@ -78,7 +86,73 @@ namespace WPFApplication {
                     OutputTextBlock.Text = output;
                     break;
             }
+        }
 
+        private void EqualBtn_Click(object sender, RoutedEventArgs e) {
+            double outputTemp;
+            switch (operation) {
+                case "Minus":
+                    outputTemp = temp - double.Parse(output);
+                    output = outputTemp.ToString();
+                    OutputTextBlock.Text = calculatorLogic.MyCalculatorMethod();
+                    break;
+
+
+
+
+                //case "Plus":
+                //    outputTemp = temp + double.Parse(output);
+                //    output = outputTemp.ToString();
+                //    OutputTextBlock.Text = output;
+                //    break;
+                //case "Times":
+                //    outputTemp = temp * double.Parse(output);
+                //    output = outputTemp.ToString();
+                //    OutputTextBlock.Text = output;
+                //    break;
+                //case "Divide":
+                //    outputTemp = temp / double.Parse(output);
+                //    output = outputTemp.ToString();
+                //    OutputTextBlock.Text = output;
+                //    break;
+            }
+        }
+
+        private void PlusBtn_Click(object sender, RoutedEventArgs e) {
+            if (output != "") {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Plus";
+            }
+        }
+
+        private void TimesBtn_Click(object sender, RoutedEventArgs e) {
+            if (output != "") {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Times";
+            }
+        }
+
+        private void DivideBtn_Click(object sender, RoutedEventArgs e) {
+            if (output != "") {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Divide";
+            }
+        }
+
+        private void MinusBtn_Click(object sender, RoutedEventArgs e) {
+            if (output != "") {
+                temp = double.Parse(output);
+                output = "";
+                operation = "Minus";
+            }
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e) {
+            output = "";
+            OutputTextBlock.Text = output;
         }
     }
 }

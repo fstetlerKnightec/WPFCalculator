@@ -133,7 +133,7 @@
             x:Name="EqualBtn"
             Grid.Row="5"
             Grid.Column="2"
-            Click="NumBtn_Click"
+            Click="EqualBtn_Click"
             Content="="
             FontSize="30"
             FontWeight="Bold" />
@@ -142,7 +142,7 @@
             x:Name="PlusBtn"
             Grid.Row="5"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="PlusBtn_Click"
             Content="+"
             FontSize="30"
             FontWeight="Bold" />
@@ -151,7 +151,7 @@
             x:Name="MinusBtn"
             Grid.Row="4"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="MinusBtn_Click"
             Content="-"
             FontSize="30"
             FontWeight="Bold" />
@@ -160,7 +160,7 @@
             x:Name="TimesBtn"
             Grid.Row="3"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="TimesBtn_Click"
             Content="x"
             FontSize="30"
             FontWeight="Bold" />
@@ -169,8 +169,17 @@
             x:Name="DivideBtn"
             Grid.Row="2"
             Grid.Column="3"
-            Click="NumBtn_Click"
+            Click="DivideBtn_Click"
             Content="/"
+            FontSize="30"
+            FontWeight="Bold" />
+
+        <Button
+            x:Name="ClearBtn"
+            Grid.Row="5"
+            Grid.Column="0"
+            Click="ClearBtn_Click"
+            Content="C"
             FontSize="30"
             FontWeight="Bold" />
 
