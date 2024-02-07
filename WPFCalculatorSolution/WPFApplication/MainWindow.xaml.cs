@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BusinessLogic;
 
 namespace WPFApplication {
     /// <summary>
@@ -16,6 +17,10 @@ namespace WPFApplication {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e) {
+            textBox.Text = BusinessLogic.CalculatorLogic.MyCalculatorMethod();
         }
     }
 }

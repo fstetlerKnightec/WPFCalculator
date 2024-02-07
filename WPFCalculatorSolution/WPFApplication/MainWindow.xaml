@@ -8,5 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+        <TextBox Name="textBox" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 50, 0, 0" 
+             Text="{Binding Output}" TextChanged="textBox_TextChanged"/>
+        
     </Grid>
 </Window>
