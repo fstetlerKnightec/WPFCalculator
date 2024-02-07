@@ -19,8 +19,10 @@ namespace WPFApplication {
             InitializeComponent();
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e) {
-            textBox.Text = BusinessLogic.CalculatorLogic.MyCalculatorMethod();
+        private void NumBtn_Click(object sender, RoutedEventArgs e) {
+            string name = ((Button)sender).Name;
+
+            MessageBox.Show(name);
         }
     }
 }
