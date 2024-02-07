@@ -28,6 +28,17 @@
             <ColumnDefinition Width="82.5" />
         </Grid.ColumnDefinitions>
 
+        <TextBlock
+            x:Name="OutputTextBlock"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Margin="5"
+            VerticalAlignment="Center"
+            FontSize="50"
+            Text="Output"
+            TextAlignment="Right" />
+
         <Button
             x:Name="SevenBtn"
             Grid.Row="2"
