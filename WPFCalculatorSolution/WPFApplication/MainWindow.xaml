@@ -22,10 +22,10 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="82.5" />
-            <ColumnDefinition Width="82.5" />
-            <ColumnDefinition Width="82.5" />
-            <ColumnDefinition Width="82.5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <TextBlock
@@ -33,10 +33,9 @@
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            Margin="5"
+            Margin="15"
             VerticalAlignment="Center"
             FontSize="50"
-            Text="Output"
             TextAlignment="Right" />
 
         <Button
