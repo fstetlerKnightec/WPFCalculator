@@ -22,9 +22,6 @@ namespace WPFApplication {
 
         string operation = "";
 
-        CalculatorLogic calculatorLogic = new CalculatorLogic();
-
-
         public MainWindow() {
             InitializeComponent();
            
@@ -33,8 +30,6 @@ namespace WPFApplication {
 
         private void NumBtn_Click(object sender, RoutedEventArgs e) {
             string name = ((Button)sender).Name;
-            output = calculatorLogic.clickNumber(name, output);
-
             switch(name) {
                 case "OneBtn":
                     output += "1";
@@ -94,27 +89,23 @@ namespace WPFApplication {
                 case "Minus":
                     outputTemp = temp - double.Parse(output);
                     output = outputTemp.ToString();
-                    OutputTextBlock.Text = calculatorLogic.MyCalculatorMethod();
+                    OutputTextBlock.Text = output;
                     break;
-
-
-
-
-                //case "Plus":
-                //    outputTemp = temp + double.Parse(output);
-                //    output = outputTemp.ToString();
-                //    OutputTextBlock.Text = output;
-                //    break;
-                //case "Times":
-                //    outputTemp = temp * double.Parse(output);
-                //    output = outputTemp.ToString();
-                //    OutputTextBlock.Text = output;
-                //    break;
-                //case "Divide":
-                //    outputTemp = temp / double.Parse(output);
-                //    output = outputTemp.ToString();
-                //    OutputTextBlock.Text = output;
-                //    break;
+                case "Plus":
+                    outputTemp = temp + double.Parse(output);
+                    output = outputTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
+                case "Times":
+                    outputTemp = temp * double.Parse(output);
+                    output = outputTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
+                case "Divide":
+                    outputTemp = temp / double.Parse(output);
+                    output = outputTemp.ToString();
+                    OutputTextBlock.Text = output;
+                    break;
             }
         }
 
