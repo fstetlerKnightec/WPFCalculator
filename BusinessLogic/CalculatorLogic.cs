@@ -68,7 +68,7 @@
                 operation = "Minus";
             }
         }
-
+        // still working on strings
         public string addNumberToOutput(string name) {
             switch (name) {
                 case "OneBtn":
