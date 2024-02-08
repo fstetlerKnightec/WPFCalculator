@@ -22,6 +22,7 @@ namespace WPFApplication {
 
         private void EqualBtn_Click(object sender, RoutedEventArgs e) {
             calculator.equal();
+            OutputTextBlock.Text = calculator.getOutput();
         }
 
         private void PlusBtn_Click(object sender, RoutedEventArgs e) {
