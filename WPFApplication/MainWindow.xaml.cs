@@ -6,7 +6,6 @@ using System.Windows.Controls;
 namespace WPFApplication {
     /// <summary>
     /// Interaction logic for MainWindow.xaml Adding comment
-    /// Addin a comment to see if the pipelin runs correctly
     /// </summary>
     public partial class MainWindow : Window {
 
@@ -18,33 +17,33 @@ namespace WPFApplication {
 
         private void NumBtn_Click(object sender, RoutedEventArgs e) {
             string name = ((Button)sender).Name;
-            OutputTextBlock.Text = calculator.addNumberToOutput(name);
+            OutputTextBlock.Text = calculator.AddNumberToOutput(name);
         }
 
         private void EqualBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.equal();
-            OutputTextBlock.Text = calculator.getOutput();
+            calculator.Equal();
+            OutputTextBlock.Text = calculator.GetOutput();
         }
 
         private void PlusBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.plus();
+            calculator.Plus();
         }
 
         private void TimesBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.times();
+            calculator.Times();
         }
 
         private void DivideBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.divide();
+            calculator.Divide();
         }
 
         private void MinusBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.minus();
+            calculator.Minus();
         }
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e) {
-            calculator.clear();
-            OutputTextBlock.Text = calculator.getOutput();
+            calculator.Clear();
+            OutputTextBlock.Text = calculator.GetOutput();
         }
     }
 }

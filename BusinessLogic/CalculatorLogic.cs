@@ -7,15 +7,15 @@
 
         string operation = "";
 
-        public void clear() {
+        public void Clear() {
             output = "";
         }
 
-        public string getOutput() {
+        public string GetOutput() {
             return output;
         }
 
-        public void equal() {
+        public void Equal() {
             double outputTemp;
             switch (operation) {
                 case "Minus":
@@ -37,7 +37,7 @@
             }
         }
 
-        public void plus() {
+        public void Plus() {
             if (output != "") {
                 temp = double.Parse(output);
                 output = "";
@@ -45,7 +45,7 @@
             }
         }
 
-        public void times() {
+        public void Times() {
             if (output != "") {
                 temp = double.Parse(output);
                 output = "";
@@ -53,7 +53,7 @@
             }
         }
 
-        public void divide() {
+        public void Divide() {
             if (output != "") {
                 temp = double.Parse(output);
                 output = "";
@@ -61,15 +61,15 @@
             }
         }
 
-        public void minus() {
+        public void Minus() {
             if (output != "") {
                 temp = double.Parse(output);
                 output = "";
                 operation = "Minus";
             }
         }
-        // still working on strings
-        public string addNumberToOutput(string name) {
+
+        public string AddNumberToOutput(string name) {
             List<string> numbersAsWords = new List<string>() {
                 "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"
             };
