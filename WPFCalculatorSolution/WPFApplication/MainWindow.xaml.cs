@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace WPFApplication {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml Adding comment
     /// </summary>
     public partial class MainWindow : Window {
 
