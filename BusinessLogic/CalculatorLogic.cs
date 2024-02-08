@@ -70,46 +70,14 @@
         }
         // still working on strings
         public string addNumberToOutput(string name) {
-            switch (name) {
-                case "OneBtn":
-                    output += "1";
-                    break;
-                case "TwoBtn":
-                    output += "2";
-                    break;
+            List<string> numbersAsWords = new List<string>() {
+                "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"
+            };
 
-                case "ThreeBtn":
-                    output += "3";
-                    break;
+            string buttonValue = name.Substring(0, name.IndexOf("B"));
 
-                case "FourBtn":
-                    output += "4";
-                    break;
+            output += numbersAsWords.IndexOf(buttonValue).ToString();
 
-                case "FiveBtn":
-                    output += "5";
-                    break;
-
-                case "SixBtn":
-                    output += "6";
-                    break;
-
-                case "SevenBtn":
-                    output += "7";
-                    break;
-
-                case "EightBtn":
-                    output += "8";
-                    break;
-
-                case "NineBtn":
-                    output += "9";
-                    break;
-
-                case "ZeroBtn":
-                    output += "0";
-                    break;
-            }
             return output;
         }
     }
