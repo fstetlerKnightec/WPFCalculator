@@ -6,6 +6,7 @@ using System.Windows.Controls;
 namespace WPFApplication {
     /// <summary>
     /// Interaction logic for MainWindow.xaml Adding comment
+    /// Addin a comment to see if the pipelin runs correctly
     /// </summary>
     public partial class MainWindow : Window {
 
