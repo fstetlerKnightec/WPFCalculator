@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="BusinessLogic">
-      <HintPath>..\BusinessLogic\bin\Debug\net8.0\BusinessLogic.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
   </ItemGroup>
 
 </Project>
